@@ -53,3 +53,27 @@ const myDetails={
 
 console.log(myDetails.firstName);
 
+
+//Destructing objects
+
+const todo = {
+    id:23,
+    title:"Play football",
+
+    // another objects
+    ball: {
+        color:'red',
+    },
+};
+
+const {
+    id , 
+    title,
+    ball:{color},
+}=todo;
+
+console.log(id,title,color);
+
+const arr=[1,2,3,4];
+const [first,second,...rest]=arr;
+console.log(first,second,rest);
